@@ -1,0 +1,1 @@
+..\Program files\vs\VC#\Snippets\1033\Visual C#

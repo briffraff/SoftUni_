@@ -1,0 +1,11 @@
+review the tracked files - "git status"
+add all files to be tracked - "git add ."
+make a commit - "git commit -m "commit comment""
+push to github - "git push"
+
+remove all files from folder - "git rm -r ."
+remove selected file from version control - "git rm --cached file.txt"
+remove origin - "git remote remove origin"
+
+add origin to github - "git remote add origin https://github.com/briffraff/a.git"
+add upstream (tracking) reference - "git push -u origin master"

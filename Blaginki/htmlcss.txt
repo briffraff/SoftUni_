@@ -1,0 +1,11 @@
+CENTERING : 
+--
+margin: 0 auto
+
+-- if FLEXBOX used -> 
+justify-content: center
+
+
+
+SET ELEMENT TO RIGHT:
+margin-left: auto;

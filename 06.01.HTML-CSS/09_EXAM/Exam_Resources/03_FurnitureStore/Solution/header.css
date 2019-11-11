@@ -1,0 +1,77 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #F93700;
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    height: 4.5em;
+    padding-top: 1em;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+ul li{
+    list-style: none;
+}
+
+header section ul{
+    padding-top: 0.7em;
+}
+
+.header-first{
+    padding-left: 3em;
+    padding-right: 5em;
+    width: 45%;
+}
+
+.header-first ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-second {
+    width:30%
+}
+
+.header-third{
+    padding-left: 5em;
+    padding-right: 3em;
+    width: 20%;
+}
+
+.header-third ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon {
+    padding-left: 35%;
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: grey;
+    color: white;
+    font-size: 14px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}

@@ -1,0 +1,138 @@
+﻿@using Fabrica.Infrastructure
+@using Fabrica.Models
+@using Fabrica.Models.Enums
+@using Fabrica.Services.Models
+@model IEnumerable<MarvelousPropServiceModel>
+
+@{
+    ViewData["Title"] = "Details";
+    var marvelousPropModel = @Model;
+}
+
+@{
+    var avatarImg = "";
+    var ImageUrl = "";
+    var Name = "";
+    var PropType = (MarvelousType)0;
+    var Description = "";
+    int Points = 0;
+    var Hashtags = "";
+    var Id = "";
+    var Creator = "";
+    var Gender = (GenderType)0;
+
+    @foreach (var prop in marvelousPropModel)
+    {
+        ImageUrl = prop.ImageUrl;
+        Name = prop.Name;
+        PropType = Enum.Parse<MarvelousType>(prop.PropType.ToString());
+        Description = prop.Description;
+        Points = prop.Points;
+        Hashtags = prop.Hashtags;
+        Id = prop.Id;
+        Creator = prop.MarvelousCreator.UserName;
+        Gender = Enum.Parse<GenderType>(prop.MarvelousCreator.Gender.ToString());
+    }
+
+    avatarImg = GlobalConstants.adminAvatar;
+
+}
+
+<section class="props3d wow fadeInUp">
+    <div class="container">
+        <div class="row">
+
+            <div id="MarvProps" class="container d-flex align-items-center flex-column text-secondary">
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <h2 class="masthead-heading text-uppercase">Details</h2>
+                <p class="masthead-heading text-uppercase">Marvelous prop</p>
+                <div class="divider-custom" style="margin-top: 0px">
+                    <div class="divider-custom-line"></div>
+                </div>
+            </div>
+
+            <div class="container prop-item d-flex align-items-center flex-column text-secondary">
+
+                <div class="container text-secondary">
+                    <div class="row">
+                        <div class="col-lg-4">
+
+                            <div class="prop-item">
+                                <img src="@ImageUrl" alt="" class="img-fluid">
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-8">
+
+                            <div class="no-underline">
+
+                                <div class="details">
+                                    <h3 class="text-primary"><a>@Name</a></h3>
+                                    <h5 class="text-primary "><a>@PropType</a></h5>
+                                    <br />
+                                    <h6>
+                                        @Description
+                                    </h6>
+                                    <br/>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h5 class="text-primary">Points : @Points</h5>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            @{
+                                                int winPoints = GlobalConstants.winPoints;
+                                            }
+                                            <h5 class="text-primary" style="padding-left: 16%">-> WIN: @winPoints points</h5>
+                                        </div>
+
+                                    </div>
+
+                                    <hr class="hr-2 bg-white">
+                                    <p>@Hashtags</p>
+
+                                    <div class="container-fluid fa fab fas far">
+                                        <a @*href=""*@ style="padding-right: 5px"><i class="fa fa-share-alt"></i></a>
+                                        <a><img class="prop-user-thumb" src="@avatarImg" alt=""></a>
+                                        <br />
+                                        <br />
+                                        <a class="prop-left-dist prop-username text-secondary">creator:</a>
+                                        <a class="prop-username text-primary">@Creator.ToUpper()</a>
+                                    </div>
+                                    <br />
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-md-9" style="padding-left: 18%">
+                                            <a asp-controller="Orders" asp-action="AddToBasket" asp-route-productId="@Id" class="py-3 px-0 px-lg-2 btn btn-outline-light bg-primary text-white">Add to basket</a>
+                                        </div>
+                                        @if (this.User.IsInRole(GlobalConstants.AdminRoleName))
+                                        {
+                                            <div class="col-md-3">
+                                                <a asp-controller="MarvelousProps" asp-action="Delete" asp-route-id="@Id" class="btn btn-outline-light bg-danger">Delete</a>
+                                            </div>
+                                        }
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br />
+    <p></p>
+</section>
+

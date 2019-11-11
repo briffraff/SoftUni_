@@ -1,0 +1,195 @@
+************************************
+****************ANOTATIONS**********
+************************************
+		//Key
+		[Key]
+
+		//Required
+		[Required]
+
+		//Regular Expression
+		[RegularExpression(@"\d{4}\s{1}\d{4}\s{1}\d{4}\s{1}\d{4}")]
+
+		//Foreign Key
+		[ForeignKey(nameof(Genre))]
+
+		//Composite Key
+		[Required]
+		[Key, Column(Order = 0)]
+		[ForeignKey(nameof(Genre))]
+
+		//Text with length[3, 20]
+		[MinLength(3), MaxLength(20)]
+
+		//Integer in the range[3, 103]
+		[Range(3, 103)]
+
+
+		//decimal (non-negative, minimum value: 0) (required)
+		[Range(typeof(decimal), "0.0", "79228162514264337593543950335")]
+
+
+		[Required(AllowEmptyStrings = false)]
+		public string Genre { get; set; }
+
+		//At least one record
+		[MinLength(1)]
+		public string[] Tags { get; set; }
+
+
+
+*******************************************************
+****************IMPORT IN MAPPING TABLE****************
+*******************************************************
+
+		***GameTag***
+		***PrisonerOfficer***
+
+		create child
+		add the child to mapping table class
+		add the mapping table class to the parent
+		add the parent class to the context
+		save the context
+
+
+
+*******************************************
+****************IMPORT JSON****************
+*******************************************
+
+		DateTime.ParseExact(gameDto.ReleaseDate, "yyyy-MM-dd", CultureInfo.InvariantCulture)
+
+
+		public static string ImportGames(DbContext context, string jsonString)
+		{
+			ImportGamesDto[] gamesDto = JsonConvert.DeserializeObject<ImportGamesDto[]>(jsonString);
+			
+			StringBuilder builder = new StringBuilder();	
+			
+			var objectClassList = new List<Class>();
+			
+			foreach (var userDto in usersAndCardsDtos)
+					{
+						if (!IsValid(userDto) || userDto.Cards.Count == 0)
+						{
+							builder.AppendLine("Invalid Data");
+							continue;
+						}
+									
+						var objectClass = new Class
+						{
+							FullName = userDto.FullName,
+							Username = userDto.Username,
+							Email = userDto.Email,
+							Age = userDto.Age,
+						};
+						
+						
+						objectClassList.Add(objectClass);
+						builder.AppendLine($"");
+					}
+
+			context.Games.AddRange(games);
+			context.SaveChanges();
+
+			string result = builder.ToString().TrimEnd();
+
+			return result;
+		}
+*********************************************************
+****************CHECK FOR VALID DTO CLASS****************
+*********************************************************
+
+		private static bool IsValid(object entity)
+		{
+			var validationContext = new ValidationContext(entity);
+			var validationResult = new List<ValidationResult>();
+
+			bool isValid = Validator.TryValidateObject(entity, validationContext, validationResult, true);
+
+			return isValid;
+		}
+
+******************************************
+****************IMPORT XML****************
+******************************************
+
+        public static string ImportOfficersPrisoners(SoftJailDbContext context, string xmlString)
+        {
+            var xmlSerializer = new XmlSerializer(typeof(ImportOfficersPrisonersDto[]), new XmlRootAttribute("Officers"));
+
+            var importOfficersPrisonersDtos = (ImportOfficersPrisonersDto[])xmlSerializer.Deserialize(new StringReader(xmlString));
+
+            var validOfficers = new List<OfficerPrisoner>();
+
+            StringBuilder builder = new StringBuilder();
+
+            foreach (var officerDto in importOfficersPrisonersDtos)
+            {
+                if (!IsValid(officerDto))
+                {
+                    builder.AppendLine("Invalid Data");
+                    continue;
+                }
+            }
+
+            context.OfficersPrisoners.AddRange(validOfficers);
+            context.SaveChanges();
+
+            string result = builder.ToString().TrimEnd();
+
+            return result;
+        }
+
+			
+*******************************************
+****************EXPORT JSON****************
+*******************************************
+
+            var collection = context
+                .Prisoners
+                .Where(p => ids.Contains(p.Id))
+                .Select(p => new
+                {
+                    Id = p.Id,
+                    Name = p.FullName,
+                    CellNumber = p.Cell.CellNumber,
+                    Officers = p.PrisonerOfficers
+                                .Select(po => new
+                                {
+                                    OfficerName = po.Officer.FullName,
+                                    Department = po.Officer.Department.Name
+                                })
+                                .OrderBy(op => op.OfficerName)
+                                .ToArray(),
+                    TotalOfficerSalary = (p.PrisonerOfficers.Sum(s => s.Officer.Salary)).ToString("0.00")
+                })
+                .OrderBy(p => p.Name)
+                .ThenBy(p => p.Id)
+                .ToArray();
+
+
+            var jsonResult = JsonConvert.SerializeObject(collection, Formatting.Indented);
+
+            return jsonResult;
+
+******************************************
+****************EXPORT XML****************
+******************************************
+            var collection = context.
+					
+
+			var xmlSerializer = new XmlSerializer(typeof(ExportUserDto[]), new XmlRootAttribute("ROOT"));
+
+			var namespaces = new XmlSerializerNamespaces(new[]
+			{
+				XmlQualifiedName.Empty
+			});
+
+			StringBuilder builder = new StringBuilder();
+
+			xmlSerializer.Serialize(new StringWriter(builder), collection, namespaces);
+
+			string result = builder.ToString().TrimEnd();
+
+			return result;

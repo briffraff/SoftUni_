@@ -1,0 +1,7 @@
+﻿namespace NUnitTesting
+{
+    class NUnitTests
+    {
+
+    }
+}

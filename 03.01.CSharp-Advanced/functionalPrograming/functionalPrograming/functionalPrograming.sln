@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingFile", "functionalPrograming\TrainingFile.csproj", "{A8FF4884-DC28-4888-B0EF-B4F0CC63EF7A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercises", "Exercises", "{70FFD375-716F-498E-897B-168CB63A440A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "knightsOfHonor", "knightsOfHonor\knightsOfHonor.csproj", "{52E0FE99-1810-4DBC-9001-8AA5709E2413}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionPoint", "ActionPoint\ActionPoint.csproj", "{8BD33AFE-59B4-4F09-8CA6-BEE51645018A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "customMinFunc", "customMinFunc\customMinFunc.csproj", "{FAF90572-0AE5-4074-A25B-E9F090104CF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppliedArithmetics", "AppliedArithmetics\AppliedArithmetics.csproj", "{D0CC73B5-2636-437A-895E-8517245C14E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8FF4884-DC28-4888-B0EF-B4F0CC63EF7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8FF4884-DC28-4888-B0EF-B4F0CC63EF7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8FF4884-DC28-4888-B0EF-B4F0CC63EF7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8FF4884-DC28-4888-B0EF-B4F0CC63EF7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52E0FE99-1810-4DBC-9001-8AA5709E2413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52E0FE99-1810-4DBC-9001-8AA5709E2413}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52E0FE99-1810-4DBC-9001-8AA5709E2413}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52E0FE99-1810-4DBC-9001-8AA5709E2413}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BD33AFE-59B4-4F09-8CA6-BEE51645018A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BD33AFE-59B4-4F09-8CA6-BEE51645018A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BD33AFE-59B4-4F09-8CA6-BEE51645018A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BD33AFE-59B4-4F09-8CA6-BEE51645018A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAF90572-0AE5-4074-A25B-E9F090104CF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAF90572-0AE5-4074-A25B-E9F090104CF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAF90572-0AE5-4074-A25B-E9F090104CF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAF90572-0AE5-4074-A25B-E9F090104CF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0CC73B5-2636-437A-895E-8517245C14E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0CC73B5-2636-437A-895E-8517245C14E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0CC73B5-2636-437A-895E-8517245C14E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0CC73B5-2636-437A-895E-8517245C14E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{52E0FE99-1810-4DBC-9001-8AA5709E2413} = {70FFD375-716F-498E-897B-168CB63A440A}
+		{8BD33AFE-59B4-4F09-8CA6-BEE51645018A} = {70FFD375-716F-498E-897B-168CB63A440A}
+		{FAF90572-0AE5-4074-A25B-E9F090104CF3} = {70FFD375-716F-498E-897B-168CB63A440A}
+		{D0CC73B5-2636-437A-895E-8517245C14E1} = {70FFD375-716F-498E-897B-168CB63A440A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4C17861-768C-4BB5-B769-92490DE49D56}
+	EndGlobalSection
+EndGlobal

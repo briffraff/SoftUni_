@@ -1,0 +1,47 @@
+
+body {
+    background-color: rgb(238, 238, 238);
+    color: rgb(51, 51, 51);
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+header {
+    display: inline-block;
+    width: 70%;
+}
+
+section {
+    display: inline-block;
+    width: 70%;
+}
+
+aside {
+    display: inline-block;
+    width: 29%;
+    margin-top: 0;
+}
+
+aside li {
+    list-style-type: square;
+}
+
+section li {
+    list-style-type: square;
+}
+
+footer {
+    display: inline-block;
+    width: 70%;
+}
+
+article.set-artcile-position {
+    margin: 50px 100px 50px 50px;
+}
+
+img.set-image-size {
+    width: 60%;
+    height: auto;
+}
+

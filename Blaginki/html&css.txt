@@ -1,0 +1,7 @@
+how to set Webstorm live edit :
+
+1. install jetbrains ide chrome support
+2. open webstorm -> run -> edit configurations -> add Javascript debug -> set name to "LivePreview" and url to current site -> OK
+3. File -> Settings -> type Live Edit -> set refresh time to 300ms , check "Highlight current element in browser.." , check "Use JetBrains IDE Support.." -> OK
+4. Start LivePreview with coverage -> split screen to show code and browser
+5. Let's code

@@ -1,0 +1,17 @@
+html {
+    font-family: "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+body, button, input, option, select, form {
+    font: inherit;
+}
+
+p, ul, ol {
+    padding: 1em;
+}
+
+li {
+    list-style-position: inside;
+}

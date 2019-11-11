@@ -1,0 +1,35 @@
+table tr:nth-child(odd) td {
+    background: rgb(241, 241, 241);
+}
+
+tr{
+    height: 35px;
+}
+
+th,td {
+    padding-left: 15px;
+    text-align: left;
+    border: 1px solid rgb(221,221,221);
+}
+
+html {
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+table {
+    border-width: 1px;
+    width: 700px;
+}
+
+tr:hover{
+    background-color: rgb(0,0,0);
+    color: white;
+}
+
+th {
+    background-color: rgb(201,201,201);
+    color: black;
+}
+

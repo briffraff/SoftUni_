@@ -1,0 +1,32 @@
+AddEmployee Ivan Stavrev 5000
+Registered successfully: Ivan Stavrev 5000
+SetBirthday 1 20-- _/0.7/1-_=988
+Birthday set successfully!
+SetAddress 1 Sofia, ul. Vitosha 15
+Address added successfully!
+AddEmployee Grigor Zarev 3500
+Registered successfully: Grigor Zarev 3500
+SetBirthday 2 23/01/1988
+Birthday set successfully!
+SetManager 2 1
+Command executed successfully!
+AddEmployee Vutko Fitkov 1300
+Registered successfully: Vutko Fitkov 1300
+SetManager 3 1
+Command executed successfully!
+SetBirthday 3 30/08/1980
+Birthday set successfully!
+EmployeeInfo 1
+ID: 1 - Ivan Stavrev -  $5000.00
+EmployeePersonalInfo 1
+ID: 1 - Ivan Stavrev - $5000.00
+Birthday: 20-07-1988
+Address: Sofia, ul. Vitosha 15
+ManagerInfo 1
+Ivan Stavrev | Employees: 2
+- Grigor Zarev - $3500.00
+- Vutko Fitkov - $1300.00
+ListEmployeesOlderThan 20
+Ivan Stavrev - $5000.00 - Manager: [no manager]
+Grigor Zarev - $3500.00 - Manager: Stavrev
+Vutko Fitkov - $1300.00 - Manager: Stavrev

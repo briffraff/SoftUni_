@@ -1,0 +1,34 @@
+Когато в условието имаме пропърти от value тип,
+но не е oписано ,че е [Required] слагаме "?" - елвис оператор,
+за да бъде "Nullable" - (допускаме да бъде със стойност Null)
+
+пример : public DateTime? NonRequiredDate {get;set;}
+-------------------------------------------------------------------
+
+В другият случай ,когато имаме value тип и е оказано ,
+че е [Required] ,слагаме такъв атрибут ,НО можем и да го изпуснем ,
+защото по начало ,този тип не може да има стойност Null.
+
+		 [Required]
+пример : public DateTime RequiredDate
+
+
+пример : public int RequiredNum
+--------------------------------------------------------------------
+value types : https://www.tutorialsteacher.com/csharp/csharp-value-type-and-reference-type
+
+
+
+
+
+DATETIME :
+----------
+Parse in exact format:
+
+Datetime.ParseExact(value,"format",CultureInfo.InvarientCulture)
+
+ползване във тернарен оператор:
+
+ReleaseDate = value != null 
+		     ? Datetime.ParseExact(value,"format",CultureInfo.InvarientCulture) 
+			 : (DateTime?)null 

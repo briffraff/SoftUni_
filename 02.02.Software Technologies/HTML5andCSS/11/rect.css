@@ -1,0 +1,21 @@
+.zelenoCentur{
+
+    border: 2px solid green;
+    border-radius: 4px;
+    padding:2px;
+    text-align:center;
+    font-size: 15px;
+
+}
+
+.chervenoNext{
+    border: dashed red;
+    border-radius:8px;
+    padding: 12px;
+}
+
+.sinioNext{
+    border: dotted blue;
+    border-radius:12px;
+    padding:12px;
+}

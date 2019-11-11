@@ -1,0 +1,15 @@
+.color-primary {
+    background-color: rgb(51, 102, 153);
+}
+
+.color-secondary {
+    background-color: white;
+}
+
+.text-primary {
+    color: rgb(51, 102, 153);
+}
+
+.text-secondary {
+    color: white;
+}

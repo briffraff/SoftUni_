@@ -1,0 +1,207 @@
+﻿@using Fabrica.Infrastructure
+@using Microsoft.AspNetCore.Identity
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="@GlobalConstants.ProjectDescription" content="">
+    <meta name="@GlobalConstants.ProjectAuthor" content="">
+
+
+    <title>@GlobalConstants.ProjectName</title>
+
+    <!-- Custom fonts for this theme -->
+    <link href="~/lib/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="@GlobalConstants.montserrat" rel="stylesheet" type="text/css">
+    <link href="@GlobalConstants.lato" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="@GlobalConstants.freelancerMinCss" rel="stylesheet">
+    <link href="@GlobalConstants.styleCss" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="@GlobalConstants.favicon">
+
+    <!-- Libraries CSS Files -->
+    <link href="@GlobalConstants.animateMinCss" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="@GlobalConstants.styleCss" rel="stylesheet">
+</head>
+
+<body id="page-top">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container-fluid">
+                <a class="js-scroll-trigger navbar-brand" href="#page-top"><img src="@GlobalConstants.fabricaLogo" /></a>
+                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded"
+                        type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+
+                    @if (this.User.Identity.IsAuthenticated == false)
+                    {
+                        <div class="container align-items-left">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item mx-0 mx-lg-1">
+                                    <a class="nav-create py-3 px-0 px-lg-3 rounded js-scroll-trigger" asp-controller="Home" asp-action="Index">/Home</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item mx-0 mx-lg-1">
+                                <a class="nav-create py-3 px-0 px-lg-3 rounded js-scroll-trigger" asp-area="Identity" asp-page="/Account/Login">/Login</a>
+                            </li>
+                            <li class="nav-item mx-0 mx-lg-1">
+                                <a class="nav-create py-3 px-0 px-lg-3 rounded js-scroll-trigger" asp-area="Identity" asp-page="/Account/Register">/Register</a>
+                            </li>
+                        </ul>
+                    }
+                    else
+                    {
+                        <div class="container align-items-left">
+                            <ul class="navbar-nav ml-auto">
+
+                                <li class="nav-item mx-0 mx-lg-1">
+                                    <a class="nav-create py-3 px-0 px-lg-3 rounded js-scroll-trigger" asp-controller="Home" asp-action="Index">/Home</a>
+                                </li>
+
+                                @if (this.User.IsInRole(GlobalConstants.AdminRoleName))
+                                {
+                                    <li class="nav-item mx-0 mx-lg-1">
+                                        <a class="nav-create py-3 px-5 px-lg-3 rounded js-scroll-trigger" asp-controller="MarvelousProps" asp-action="Create">
+                                            /Create
+                                            MarvelousProp
+                                        </a>
+                                    </li>
+                                }
+
+                                @if (this.User.IsInRole(GlobalConstants.UserRoleName))
+                                {
+                                    <li class="nav-item mx-0 mx-lg-1">
+                                        <a class="nav-create py-3 px-5 px-lg-3 rounded js-scroll-trigger" asp-controller="Props" asp-action="Create">
+                                            /Create
+                                            3DProp
+                                        </a>
+                                    </li>
+                                }
+
+                            </ul>
+                        </div>
+
+                        <ul class="navbar-nav ml-auto">
+                            @if (this.User.IsInRole(GlobalConstants.AdminRoleName))
+                            {
+                                <li class="mx-0 mx-lg-1">
+                                    <a class="nav-link py-3 px-0 px-lg-2 btn btn-outline-light btn-social mx-1" asp-controller="Orders" asp-action="All">
+                                        <i class="fas fa-fw fa-box"></i>
+                                    </a>
+                                </li>
+                            }
+
+                            <li class="mx-0 mx-lg-1">
+                                <a class="nav-link py-3 px-0 px-lg-2 btn btn-outline-light btn-social mx-1" asp-controller="Orders" asp-action="My">
+                                    <i class="fas fa-fw fa-cart-arrow-down"></i>
+                                </a>
+                            </li>
+                            <li class="mx-0 mx-lg-1">
+                                <a class="nav-link py-3 px-0 px-lg-2 rounded js-scroll-trigger" asp-controller="Users" asp-action="Profile">[@this.User.Identity.Name]</a>
+                            </li>
+
+                            <form asp-area="Identity" asp-page="/Account/Logout" method="post" id="logoutForm">
+                                <li class="nav-item mx-0 mx-lg-1">
+                                    <a class="nav-create py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="javascript:document.getElementById('logoutForm').submit()">/Logout</a>
+                                </li>
+                            </form>
+                        </ul>
+                    }
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mt-3">
+        @RenderBody();
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer text-center bg-secondary">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- Footer Location -->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Location</h4>
+                    <p class="lead mb-0">
+                        1000 - Sofia
+                        <br/>84 - Alexander Stamboliiski blvrd.
+                    </p>
+                </div>
+
+                <!-- Footer Social Icons -->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Around the Web</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="@GlobalConstants.facebook">
+                        <i class="fab fa-fw fa-facebook-f"></i>
+                    </a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="@GlobalConstants.instagram">
+                        <i class="fab fa-fw fa-linkedin-in"></i>
+                    </a>
+                    <a class="btn btn-primary btn-social mx-1" style="border-color: white" href="@GlobalConstants.myRepository3dFabrica">
+                        <i class="fab fa-fw fa-2x fa-github"></i>
+                    </a>
+                </div>
+
+                <!-- Footer About Text -->
+                <div class="col-lg-4">
+                    <h4 class="text-uppercase mb-4">About</h4>
+                    <p class="lead mb-0">
+                        Retail web store focused on 3D ARTISTS and companies specialized in virtualization
+                        industry.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright Section -->
+    <section class="copyright py-1 text-center text-white">
+        <div class="container-fluid">
+            <small>Copyright &copy; 3dFABRICA.COM - 2019</small>
+            <a class="js-scroll-trigger navbar-brand" href="#page-top"><img class="footerLogo" src="@GlobalConstants.fabricaLogo" /></a>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- SCRIPTS-->
+    <!-- Bootstrap core JavaScript -->
+    <script src="@GlobalConstants.jqueryMinJs" asp-append-version="true"></script>
+    <script src="@GlobalConstants.bootstrapBundleMinJs" asp-append-version="true"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="@GlobalConstants.jqueryEasingMinJs" asp-append-version="true"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="@GlobalConstants.jqBootstrapValidationJs" asp-append-version="true"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="@GlobalConstants.freelancerMinJs" asp-append-version="true"></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="@GlobalConstants.mainJs" asp-append-version="true"></script>
+
+    <!-- JavaScript Libraries -->
+    <script src="@GlobalConstants.wowMinJs" asp-append-version="true"></script>
+
+</body>
+</html>

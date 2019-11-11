@@ -1,0 +1,101 @@
+﻿@using Fabrica.Services.Models
+@model LicenzeServiceModel
+
+@{
+    ViewData["Title"] = "BuyLicense";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Content-->
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <h1 class="masthead-heading text-uppercase text-center text-secondary">Licenses</h1>
+        <br />
+        <div class="row" style="margin-right: 0px">
+            <div class="col-lg-4">
+                <div class="mb-5 mb-lg-0">
+                    <div class="prop-item">
+                        <h5 class="masthead-subheading text-primary text-uppercase text-center">Basic Access</h5>
+                        <h6 class="text-secondary text-center">$30</h6>
+                        <hr>
+                        <ul class="fa-ul text-muted">
+                            <li><span class="fa-li"><i class="fa fa-check text-success"></i></span>Receive points - 75</li>
+                            <li><span class="fa-li"><i class="fa fa-check text-success"></i></span>Props Access</li>
+                            <li><span class="fa-li"><i class="fa fa-times text-danger"></i></span>Marvelous Access</li>
+                            <li><span class="fa-li"><i class="fa fa-times text-danger"></i></span>Create Collections</li>
+                            <li><span class="fa-li"><i class="fa fa-times text-danger"></i></span>Workshops Access</li>
+                        </ul>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="mb-5 mb-lg-0">
+                    <div class="prop-item">
+                        <h5 class="masthead-subheading text-primary text-uppercase text-center">Advanced Access</h5>
+                        <h6 class="text-secondary text-center">$100</h6>
+                        <hr>
+                        <ul class="fa-ul text-muted">
+                            <li><span class="fa-li"><i class="fa fa-check text-success"></i></span>Receive points - 250</li>
+                            <li><span class="fa-li"><i class="fa fa-check text-success"></i></span>Props Access</li>
+                            <li><span class="fa-li"><i class="fa fa-check text-success"></i></span>Marvelous Access</li>
+                            <li><span class="fa-li"><i class="fa fa-times text-danger"></i></span>Create Collections</li>
+                            <li><span class="fa-li"><i class="fa fa-times text-danger"></i></span>Workshops Access</li>
+                        </ul>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="mb-5 mb-lg-0">
+                    <div class="prop-item">
+                        <h5 class="masthead-subheading text-primary text-uppercase text-center">Expert Access</h5>
+                        <h6 class="text-secondary text-center">$500</h6>
+                        <hr>
+                        <ul class="fa-ul text-muted">
+                            <li><span class="fa-li"><i class="fa fa-check text-success"></i></span>Receive points - 1250</li>
+                            <li><span class="fa-li"><i class="fa fa-check text-success"></i></span>Props Access</li>
+                            <li><span class="fa-li"><i class="fa fa-check text-success"></i></span>Marvelous Access</li>
+                            <li><span class="fa-li"><i class="fa fa-check text-success"></i></span>Create Collections</li>
+                            <li><span class="fa-li"><i class="fa fa-check text-success"></i></span>Workshops Access</li>
+                        </ul>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <form class="mx-auto half-width" method="post" asp-antiforgery="true">
+
+            <div class="form-group">
+                <label asp-for="@Model.Type"></label>
+                <select class="form-control" asp-for="@Model.Type" placeholder="Select License...">
+                    <option selected disabled>Select License...</option>
+                    <option value="Basic">Basic access - 30$</option>
+                    <option value="Advanced">Advanced access - 100$</option>
+                    <option value="Expert">Expert access - 500$</option>
+                </select>
+                <span asp-validation-for="@Model.Type" class="text-danger"></span>
+            </div>
+
+            <div class="container row">
+                <div class="col-md-12" s>
+                    <button type="submit" class="btn btn-warning py-lg-4">BUY NOW</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Icon Divider -->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="divider-custom-line"></div>
+        </div>
+    </div>
+</header>
+

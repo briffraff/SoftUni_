@@ -1,0 +1,39 @@
+html {
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+body div.container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 15vw;
+    max-height: 35rem;
+    background-color: yellow;
+}
+
+.flex-item {
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    padding: 1em;
+    margin: 0.2em;
+    width: 20vw;
+    line-height: 3vw;
+    text-align: center;
+}
+
+.flex-item:nth-child(11){order: 1;}
+.flex-item:nth-child(2){order: 2;}
+.flex-item:nth-child(12){order: 3;}
+.flex-item:nth-child(4){order: 4;}
+.flex-item:nth-child(8){order: 5;}
+.flex-item:nth-child(9){order: 6;}
+.flex-item:nth-child(6){order: 7;}
+.flex-item:nth-child(5){order: 8;}
+
+.flex-item:nth-child(1){order: 9;}
+.flex-item:nth-child(3){order: 10;}
+.flex-item:nth-child(7){order: 11;}
+.flex-item:nth-child(10){order: 12;}

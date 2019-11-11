@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(238, 238, 238);
+    color: rgb(51, 51, 51);
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+article.set-artcile-position {
+    margin: 10px 250px 10px 250px;
+}
+
+img.set-image-size {
+    width: 60%;
+    height: auto;
+}

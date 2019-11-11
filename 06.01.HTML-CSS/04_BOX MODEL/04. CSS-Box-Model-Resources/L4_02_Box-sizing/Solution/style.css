@@ -1,0 +1,22 @@
+html {
+    box-sizing: inherit;
+}
+
+section.set-borders {
+    width: 250px;
+    height: 250px;
+    border-style: dotted;
+    border-color: #00C764;
+}
+
+section.set-position {
+    margin: 50px auto auto auto;
+}
+
+p.options {
+    width: 100%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: blue;
+    padding: 20px 20px 20px 20px;
+}

@@ -1,0 +1,77 @@
+.site-footer {
+    min-height: 10em;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 5em 1.5em 5em;
+}
+
+.footer-left {
+    width: 40%;
+    /*background-color: orangered;*/
+}
+
+.footer-right {
+    width: 50%;
+    /*background-color: grey;*/
+}
+
+.footer-left ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-us{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.align-it {
+    padding-top: 0.3em;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-right-1 {
+    width: 65%;
+}
+
+.footer-right-1 ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-right-1 ul li button {
+    margin-top: 0.3em;
+    padding: 0.5em 3.5em 0.5em 3.5em;
+    background-color: #CAC3C3;
+    border: none;
+    border-radius: 5%;
+    font-size: 14px;
+
+}
+
+.work-time {
+    font-size: 0.8em;
+}
+
+.footer-right-social{
+    display: flex;
+    justify-content: center;
+    width: 35%;
+    /*background-color: red;*/
+}
+
+.footer-right-social section{
+    color: grey;
+    /*background-color: black;*/
+    margin-left: auto;
+}
+
+.footer-right-social section i {
+    padding-left: 0.6em;
+}
+

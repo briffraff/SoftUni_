@@ -1,0 +1,20 @@
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+
+html{
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Helvetica, sans-serif;
+}
+
+ul.icons{
+    list-style-type: none;
+}
+
+/*.space{*/
+    /*padding-right: 5px;*/
+/*}*/
+
+section.fit{
+    margin-top: 100px;
+    margin-left: 100px;
+}

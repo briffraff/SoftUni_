@@ -1,0 +1,4 @@
+	public interface IAirplaneFactory
+	{
+		IAirplane CreateAirplane(string type);
+	}

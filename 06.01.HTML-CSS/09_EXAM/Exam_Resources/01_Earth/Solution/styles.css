@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.earth-info{
+    margin: 10% auto;
+    width: 40em;
+    height: auto;
+    border: 1px solid black;
+}
+
+header {
+    padding-top: 1em;
+    padding-left: 0.5em;
+    height: 6em;
+    color: white;
+    background-color: black;
+}
+
+.earth {
+    font-size: 2em;
+    color: #13E9FF;
+}
+
+main {
+    padding: 2em 1em 2em 1em;
+    display: flex;
+}
+
+main article section {
+    width: 12em;
+    height: 15em;
+    padding: 0.5em 0.7em 0.5em 0.7em;
+}
+
+main article {
+    align-items: center;
+    display: block;
+    border: 1px solid black;
+    height: 16.5em;
+}
+
+main article section p {
+    padding: 0em 0em 1em 0em;
+}
+
+section img {
+    width: 11em;
+    height: auto;
+}
+
+main p {
+    padding-left: 1em;
+    font-size: 1.4em;
+}
+
+main article p {
+    font-size: 0.6em;
+}
+
+footer section {
+}
+
+.facts {
+    padding: 0.3em 1em 0.3em 1em;
+    width: 12em;
+    height: 2em;
+    color: white;
+    background-color: black;
+}
+
+.facts-info {
+    padding: 1em;
+    background-color: #D9EBEB;
+}

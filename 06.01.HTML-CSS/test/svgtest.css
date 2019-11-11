@@ -1,0 +1,59 @@
+@import "vars.css";
+
+body {
+    background-color: var(--primary-color);
+    padding: 4em;
+}
+
+.page-title {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 1.5em;
+    font-family: Helvetica, sans-serif;
+    color: cadetblue;
+}
+
+.page-subtitle {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 0.8em;
+    font-family: Verdana, Arial, sans-serif;
+    padding-bottom: 1em;
+    color: black;
+}
+
+.svg-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 70%;
+    padding: 0 1em 1em 1em;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+}
+
+.svg-article {
+    border-radius: 0.5em;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 31.5%;
+    height: 100%;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+
+.svg-article h1 {
+    font-size: 1em;
+    font-family: Helvetica, sans-serif;
+    color: cadetblue;
+}
+
+.svg-article img {
+    width: 80%;
+    height: 80%;
+    padding: 1em;
+    border-radius: 50%;
+}

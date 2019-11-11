@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4em;
+    align-items: stretch;
+    background-color: rgb(238, 238, 238);
+    /*max-width: 80em;*/
+    /*margin: 0 auto;*/
+    justify-content: space-between;
+}
+
+.site-header,
+.site-footer,
+.site-main,
+.site-sitebar {
+    background-color: #FFFFFF;
+    border-radius: 0.5em;
+    box-shadow: 0px 0px 12px -5px;
+}
+
+.site-header {
+    margin-bottom: 0.8em;
+    flex: 1 0 100%;
+    width: auto;
+    height: 10em;
+}
+
+.site-main {
+    margin: 0.8em 0.8em 0.8em 0em;
+    flex: 1 0 58%;
+    width: auto;
+    height: 20em;
+}
+
+.site-sitebar {
+    margin: 0.8em 0em 0.8em 0.8em;
+    flex: 1 0 38%;
+    width: auto;
+    height: auto;
+}
+
+.site-footer {
+    margin-top: 0.8em;
+    flex: 1 0 100%;
+    width: auto;
+    height: 6em;
+}

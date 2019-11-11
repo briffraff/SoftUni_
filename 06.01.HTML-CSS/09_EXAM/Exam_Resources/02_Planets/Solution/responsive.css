@@ -1,0 +1,48 @@
+@media only screen and (min-width: 1000px) {
+    .planet {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    h1{
+        color: yellow;
+    }
+
+    main .pair{
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .planet {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    h1 {
+        color: blue;
+    }
+
+    main .pair{
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .planet {
+        width: 100%;
+        height: 100%;
+    }
+
+    .news ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    footer nav {
+        display: flex;
+        flex-direction: column;
+    }
+}

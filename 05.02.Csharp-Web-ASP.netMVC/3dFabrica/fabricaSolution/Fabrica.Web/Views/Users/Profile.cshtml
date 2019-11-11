@@ -1,0 +1,156 @@
+﻿@using Fabrica.Infrastructure
+@using Fabrica.Models
+@using Fabrica.Models.Enums
+@using Fabrica.Web.Models
+@model IEnumerable<CreditAccountViewModel>
+
+@{
+    var user = ((Task<FabricaUser>)ViewData["CurrentUser"]).Result;
+}
+
+@{
+    ViewData["Title"] = "MyProfile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="masthead bg-primary text-white text-center" style="padding-top: 130px; padding-bottom: 20px">
+    <div class="row" style="margin-right: 0px">
+
+        @if (this.User.Identity.IsAuthenticated)
+        {
+
+            <div class="column">
+                <i class="masthead-subheading fas fa-user-circle text-white-50" aria-hidden="true">&ensp;</i>
+                <h1 class="masthead-subheading text-uppercase text-md-center text-secondary">@user.UserName ,</h1>
+                @if (this.User.IsInRole(GlobalConstants.UserRoleName))
+                {
+                    @if (user.Gender == GenderType.Male)
+                    {
+                        <div class="row" style="margin-right: 0px; padding-left: 31%; padding-top: 15px;">
+                            <div class="col-md-6">
+                                <img class="masthead-avatar mb-5" src="@GlobalConstants.maleAvatar" alt="">
+                            </div>
+
+                            <div class="col-md-6">
+                                <a class="py-3 px-0 px-lg-2 btn btn-warning btn-outline-light" asp-controller="Props" asp-action="My">My Props</a>
+                            </div>
+                        </div>
+                    }
+                    else if (user.Gender == GenderType.Female)
+                    {
+                        <div class="row" style="margin-right: 0px; padding-left: 31%; padding-top: 15px;">
+                            <div class="col-md-6">
+                                <img class="masthead-avatar mb-5" src="@GlobalConstants.femaleAvatar" alt="">
+                            </div>
+
+                            <div class="col-md-6">
+                                <a class="py-3 px-0 px-lg-2 btn btn-warning btn-outline-light" asp-controller="Props" asp-action="My">My Props</a>
+                            </div>
+                        </div>
+                    }
+                }
+
+                @if (this.User.IsInRole(GlobalConstants.AdminRoleName))
+                {
+                    <img class="masthead-avatar mb-5" src="@GlobalConstants.adminAvatar" alt="">
+                }
+
+                <div class="row" style="margin-right: 0px; padding-left: 42%;">
+                    <a class="py-3 px-0 px-lg-2 btn btn-warning btn-outline-light" asp-controller="CreditAccounts" asp-action="AddCreditCard"><i class="fas fa-plus text-white-50" aria-hidden="true" style="padding-right: 5px;"></i>Add Credit Card</a>
+                </div>
+
+                @if (User.IsInRole(GlobalConstants.AdminRoleName))
+                {
+            <div class="row" style="margin-right: 0px; padding-left: 42%; padding-top: 15px;">
+                <a class="py-3 px-0 px-lg-2 btn btn-warning btn-outline-light" asp-controller="Users" asp-action="All"><i class="fas fa-users text-white-50" aria-hidden="true" style="padding-right: 5px;"></i>All Users</a>
+            </div>
+                }
+
+                <div class="row" style="margin-right: 0px; padding-left: 42%; padding-top: 15px; padding-bottom: 20px">
+                    <a class="py-3 px-0 px-lg-2 btn btn-danger btn-outline-light" asp-controller="Users" asp-action="Delete" ><i class="fas fa-minus text-white-50" aria-hidden="true" style="padding-right: 5px;"></i>DELETE PROFILE</a>
+                </div>
+            </div>
+
+            <div class="column">
+                <h1 class="masthead-heading text-uppercase text-md-center text-secondary">Profile info</h1>
+                <br/>
+                <br/>
+
+                @if (User.IsInRole(GlobalConstants.AdminRoleName))
+                {
+                    <i class="masthead-subheading fas fa-info-circle text-white-50" aria-hidden="true">&ensp;</i>
+                    <h5 class="masthead-subheading text-md-center text-uppercase text-white">Administrator</h5>
+                    <br/>
+                }
+
+                <i class="masthead-subheading fa fa-envelope text-white-50" aria-hidden="true">&ensp;</i>
+                <h5 class="masthead-subheading text-md-center text-uppercase text-white">@user.Email</h5>
+                <br/>
+
+                @if (@Model.Count() == 0)
+                {
+                    <i class="masthead-subheading fa fa-credit-card text-white-50" aria-hidden="true">&ensp;</i>
+                    <h5 class="masthead-subheading text-md-center text-uppercase text-danger">@GlobalConstants.CreditAccountNotRegistered</h5>
+                    <br/>
+                    <br/>
+                    <hr>
+                    <div class="row" style="margin-right: 0px">
+                        <div class="column">
+                            <a class="py-3 px-0 px-lg-2 btn btn-outline-light" asp-controller="CreditAccounts" asp-action="LoadCash"><i class="fas fa-plus text-white-50" aria-hidden="true" style="padding-right: 5px;"></i>Load cash</a>
+                        </div>
+                        <div class="column" style="padding-left: 28%; padding-top: 10px">
+                            <i class="masthead-subheading fa fa-money-bill-wave text-white-50" aria-hidden="true">&ensp;</i>
+                            <h5 class="masthead-subheading text-md-center text-uppercase text-white">@GlobalConstants.InitialCash $</h5>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-right: 0px">
+                        <div class="column">
+                            <a class="py-3 px-0 px-lg-2 btn btn-outline-light" asp-controller="CreditAccounts" asp-action="BuyLicense"><i class="fas fa-plus text-white-50" aria-hidden="true" style="padding-right: 5px;"></i>Get a License</a>
+                        </div>
+                        <div class="column" style="padding-left: 28%; padding-top:0px">
+                            <h5 class="masthead-subheading text-uppercase text-white-50">Points :</h5>
+                            <h5 class="masthead-subheading text-uppercase text-white">@GlobalConstants.InitialPoints</h5>
+                        </div>
+                    </div>
+                }
+                else if (@Model.Count() > 0)
+                {
+                    @foreach (var account in @Model)
+                     {
+                         var authNumber = string.Format("{0}{1}",GlobalConstants.authNumberTemplate,account.AuthNumber);
+
+                        <i class="masthead-subheading fa fa-credit-card text-white-50" aria-hidden="true">&ensp;</i>
+                        <h5 class="masthead-subheading text-md-center text-uppercase text-white">@authNumber</h5>
+                        <br/>
+                        <br/>
+                        <hr>
+                        <div class="row" style="margin-right: 0px">
+                            <div class="column">
+                                <a class="py-3 px-0 px-lg-2 btn btn-outline-light" asp-controller="CreditAccounts" asp-action="LoadCash"><i class="fas fa-plus text-white-50" aria-hidden="true" style="padding-right: 5px;"></i>Load cash</a>
+                            </div>
+                            <div class="column" style="padding-left: 28%; padding-top: 10px">
+                                <i class="masthead-subheading fa fa-money-bill-wave text-white-50" aria-hidden="true">&ensp;</i>
+                                <h5 class="masthead-subheading text-md-center text-uppercase text-white">@account.Cash.ToString("F2") $</h5>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-right: 0px">
+                            <div class="column">
+                                <a class="py-3 px-0 px-lg-2 btn btn-outline-light" asp-controller="CreditAccounts" asp-action="BuyLicense"><i class="fas fa-plus text-white-50" aria-hidden="true" style="padding-right: 5px;"></i>Get a License</a>
+                            </div>
+                            <div class="column" style="padding-left: 28%; padding-top:0px">
+                                <h5 class="masthead-subheading text-uppercase text-white-50">Points :</h5>
+                                <h5 class="masthead-subheading text-uppercase text-white">@account.Points</h5>
+                            </div>
+                        </div>
+                    }
+                }
+
+
+            </div>
+        }
+
+    </div>
+</header>
+

@@ -1,0 +1,13 @@
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP-QDH2QOS\SQLEXPRESS;Database=FootballBetting;Integrated Security=True;");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder
+                .Entity<Town>(e =>
+                {
+                });
+        }
+

@@ -1,0 +1,45 @@
+<div class="container body-content">
+    <div class="row">
+        <div class="col-md-12">
+            <article>
+                <header>
+                    <h1 style="text-align: left"> Welcome , {{user.fullName}} !</h1><br><br>
+                </header>
+
+                <div class="clearfix">
+                    <img src="http://www.shawnee.edu/_resources/images/profile-placeholder.png" width="300px" height="300px" class="pull-left" style="margin-right: 150px;"/>
+                    <h3> Account information :</h3><br>
+                    <p><span>Your registered e-mail : </span> <span style="font-size: large; color: mediumaquamarine;">{{user.email}}</span></p>
+                    <p><span>Your username : </span> <span style="font-size: large; color: mediumaquamarine;">{{user.fullName}}</span></p>
+                    <br><br><br>
+                    <p><span >Date : </span><span id="datetime" style="font-size: large; color: mediumaquamarine;">
+                            <script>
+                                date = new Date();
+                                date = date.toString()
+                                date = date.slice(4,15);
+                                document.getElementById("datetime").innerHTML = date;
+                            </script>
+                         </span>
+                         </span>
+                    </p>
+                    <p><span>Time : </span><span id="time" style="font-size: large; color: mediumaquamarine; text-align: right">
+                            <script>
+                                date = new Date();
+                                date = date.toString()
+                                date = date.slice(15,25);
+                                document.getElementById("time").innerHTML = date;
+                            </script>
+                         </span>
+                        </span>
+                    </p>
+                </div>
+
+                <footer>
+                    <div class="pull-right">
+                        <a class="btn btn-success btn-xs" href="/">Back &raquo;</a>
+                    </div>
+                </footer>
+            </article>
+        </div>
+    </div>
+</div>

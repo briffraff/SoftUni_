@@ -1,0 +1,60 @@
+- create folder - Exam
+- Git Create repository here
+- create folder - Description
+- copy Views , Resources , Exam Description into description folder
+- goto https://github.com/SoftUni/csharp-web 
+- download zip file of MVCFramework and copy "src folder" next to Description folder
+- open SIS solution
+- create folder in Apps, called "Exam name"
+- Create 3 new projects :
+	- Console app 
+		....\Apps\[Exam name] - [Exam name].Web 
+		//Add Reference SIS.MvcFramework //(netcoreapp2.2)
+		//Add Reference [ExamName].Services
+		//Add Reference [ExamName].Data
+
+	- Class Library(.Net Standart) 
+		location : ....\Apps\[Exam name] , project name: [Exam name].Data //(netcoreapp2.0)
+		//Add Nuget package - Microsoft.EntityFrameworkCore.SqlServer 2.2.4
+
+	- Class Library(.Net Standart) 
+		location : ....\Apps\[Exam name] , project name: [Exam name].Services  //(netcoreapp2.0)
+		//Add Reference [ExamName].Data //(netcoreapp2.0)
+
+- create [ExamName]DbContext.cs : DbContext -> .Data
+- create DBConfig.cs
+- create public const string ConnectionString = @"Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;Integrated Security=true";
+- override OnConfiguring; 
+- optionsBuilder.UseSqlServer(DBConfig.ConnectionString);
+- override OnModelCreating;
+- create folder - Models in [ExamName].Data
+- create all models classes 
+- add them as DBsets -> [ExamName]DBContext.cs file  //public DbSet<Model> Models {get; set;} 
+- create Startup.cs in .Web : IMvcApplication and implement methods 
+	//ConfigureServices is a method to register services 
+	// Configure is digging up database - using (var db = new [ExamName]DBContext()){db.Database.EnsureCreated();}
+- add line - WebHost.Start(new Startup()) in Program.cs
+- make .Web as default starting app
+- .Web should contains (Controllers,ViewModels,Views) folders.
+- copy Resources and Views 
+- make their files "Copy always"
+- make HomeController  //check Panda project
+
+[[[ STEPS:
+-create [Views.name]Controller.cs : Controller -> .WEB //UserController
+-create I[View.name]Service.cs -> .SERVICES //IUserService
+-create [View.name]Service.cs : I[View.name]Service  -> .SERVICES //UserService
+-register services into Startup.cs //serviceProvider.Add<IUsersService, UsersService>();
+-then implement the ctor into controller with its service
+-create folder with ViewName //Users
+-create inside [ViewHtmlPage.name]InputModel.cs //RegisterInputModel
+- //add itself [htmlFields] as property into inputmodel //validate //anotations [RequiredSis]
+- [HttpPost] IActionResult ViewHtmlPage.name (//RegisterInputModel input) into CONTROLLER -> .Web 
+]]]
+
+
+- ###### DONT'T FORGET ########
+ TO REGISTER SERVICES! ->  ConfigureServices method
+ TO USE [Authorize] - security anotation on EVERYTHING if "logged in user" .. except homepage ,login ,register
+
+
