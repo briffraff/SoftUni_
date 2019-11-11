@@ -1,16 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02b11b8d-d839-4fc6-8d77-6265cd5f7866" name="Default Changelist" comment="" />
+    <list default="true" id="02b11b8d-d839-4fc6-8d77-6265cd5f7866" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.CSS VARIABLES &amp; ICON FONTS/02. CSS-Variables-and-Font-Icons-Lab/01. Font-size-variables/Solution/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.CSS VARIABLES &amp; ICON FONTS/02. CSS-Variables-and-Font-Icons-Lab/01. Font-size-variables/Solution/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.CSS VARIABLES &amp; ICON FONTS/02. CSS-Variables-and-Font-Icons-Lab/01. Font-size-variables/Solution/variables.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.01.ProgramingFundamentals/Regex/RegexSolution" beforeDir="false" afterPath="$PROJECT_DIR$/../02.01.ProgramingFundamentals/Regex/RegexSolution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.01Csharp-WEB-Basic/ExamPreps" beforeDir="false" afterPath="$PROJECT_DIR$/../05.01Csharp-WEB-Basic/ExamPreps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.01Csharp-WEB-Basic/ExamWeb" beforeDir="false" afterPath="$PROJECT_DIR$/../05.01Csharp-WEB-Basic/ExamWeb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="06.02.CSS-Advanced" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1TTKojXKcjKsdDdf84mzZloQT0i" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -26,6 +53,16 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/06.02.CSS-Advanced/02.CSS VARIABLES &amp; ICON FONTS/02. CSS-Variables-and-Font-Icons-Lab/01. Font-size-variables/Solution/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -38,11 +75,23 @@
       <updated>1573478821436</updated>
       <workItem from="1573478822511" duration="7000" />
       <workItem from="1573478848987" duration="12000" />
-      <workItem from="1573479073761" duration="1593000" />
+      <workItem from="1573479073761" duration="2941000" />
+      <workItem from="1573489339275" duration="2259000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

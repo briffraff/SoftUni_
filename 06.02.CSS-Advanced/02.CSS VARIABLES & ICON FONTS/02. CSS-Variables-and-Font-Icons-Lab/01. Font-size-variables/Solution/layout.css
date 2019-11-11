@@ -1,0 +1,19 @@
+body {
+    font-family: var(--global-font);
+    padding: 1em 10em 1em 10em;
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    /*background-color: red;*/
+    text-align: center;
+}
+
+h3 {
+    font-style: italic;
+    font-size: var(--font-size-h3);
+}
+
+p {
+    font-size: var(--font-size-p);
+}
