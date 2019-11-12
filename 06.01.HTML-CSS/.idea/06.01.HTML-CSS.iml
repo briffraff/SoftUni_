@@ -9,5 +9,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Avatars" />
+    <orderEntry type="module" module-name="06.02.CSS-Advanced" />
   </component>
 </module>
