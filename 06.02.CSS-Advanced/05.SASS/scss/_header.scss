@@ -1,23 +1,24 @@
 header {
   .title {
-    color: white;
+    color: color(white);
+    font-family: font(primary),sans-serif;
   }
 
   section {
-    background-color: whitesmoke;
+    background-color: color(secondary);
     width: $main-width;
     height: $main-height;
     @include center-flex;
 
     a {
       font-size: 24px;
-      font-family: $primary-font;
+      font-family: font(secondary),sans-serif;
       line-height: 1.5;
       text-transform: uppercase;
 
       .icon-flag {
         padding-right: 0.5em;
-        color: red;
+        color: color(red);
       }
     }
   }

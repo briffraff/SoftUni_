@@ -4,3 +4,11 @@
   align-items: center;
 }
 
+@function font($font-name) {
+  @return map_get($fonts, $font-name);
+}
+
+@function color($color-name) {
+  @return map_get($colors,$color-name)
+}
+

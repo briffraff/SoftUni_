@@ -1,21 +1,21 @@
 footer {
-  background-color: #275468;
+  background-color: color(third);
   width: $main-width;
   height: 50px;
   @include center-flex;
   margin-top: 0.5em;
 
   p {
-    font-family: $secondary-font;
+    font-family: font(primary), sans-serif;
     font-size: 15px;
     padding: 5px;
   }
 
   p:nth-child(1) {
-    color: white;
+    color: color(white);
 
     &:hover {
-      color: #FFC701;
+      color: color(hover-color);
 
       &::after {
         content: "+";
@@ -23,8 +23,7 @@ footer {
     }
   }
 
-
   p:nth-child(2) {
-    color: red;
+    color: color(red);
   }
 }

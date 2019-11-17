@@ -1,7 +1,16 @@
-$primary-color : #333;
+$colors: (
+        primary: #333,
+        secondary: whitesmoke,
+        third: #275468,
+        white: white,
+        red: red,
+        hover-color: #FFC701
+);
 
-$primary-font : Verdana, sans-serif;
-$secondary-font: Helvetica, sans-serif;
+$fonts: (
+        primary: (Verdana),
+        secondary: (Helvetica)
+);
 
 $main-width: 150px;
 $main-height: 150px;
