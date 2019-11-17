@@ -1,0 +1,54 @@
+body {
+  background-color: #333;
+}
+
+header .title {
+  color: white;
+}
+header section {
+  background-color: whitesmoke;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header section a {
+  font-size: 24px;
+  font-family: Verdana, sans-serif;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+header section a .icon-flag {
+  padding-right: 0.5em;
+  color: red;
+}
+
+footer {
+  background-color: #275468;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5em;
+}
+footer p {
+  font-family: Helvetica, sans-serif;
+  font-size: 15px;
+  padding: 5px;
+}
+footer p:nth-child(1) {
+  color: white;
+}
+footer p:nth-child(1):hover {
+  color: #FFC701;
+}
+footer p:nth-child(1):hover::after {
+  content: "+";
+}
+footer p:nth-child(2) {
+  color: red;
+}
+
+/*# sourceMappingURL=styles.css.map */

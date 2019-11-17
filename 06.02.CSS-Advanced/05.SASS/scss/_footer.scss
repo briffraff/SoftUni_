@@ -1,0 +1,30 @@
+footer {
+  background-color: #275468;
+  width: $main-width;
+  height: 50px;
+  @include center-flex;
+  margin-top: 0.5em;
+
+  p {
+    font-family: $secondary-font;
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  p:nth-child(1) {
+    color: white;
+
+    &:hover {
+      color: #FFC701;
+
+      &::after {
+        content: "+";
+      }
+    }
+  }
+
+
+  p:nth-child(2) {
+    color: red;
+  }
+}
