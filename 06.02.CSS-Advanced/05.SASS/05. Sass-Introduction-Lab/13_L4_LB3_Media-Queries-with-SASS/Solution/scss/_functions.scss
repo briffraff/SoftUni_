@@ -1,0 +1,6 @@
+
+//get the screen size - desktop,tablet,mobile
+
+@function size($size-name){
+  @return map_get($sizes, $size-name)
+}

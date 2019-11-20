@@ -1,0 +1,38 @@
+//desktop size
+@mixin desktop {
+  @media only screen and (max-width: size(desktop)) {
+    color: red;
+    width: 90%;
+    height: 650px;
+
+    .body-div-center-h1::before {
+      content: 'desktop';
+    }
+  }
+}
+
+//tablet size
+@mixin tablet {
+  @media only screen and (max-width: size(tablet)) {
+    color: greenyellow;
+    width: 400px;
+    height: 600px;
+
+    .body-div-center-h1::before {
+      content: 'tablet';
+    }
+  }
+}
+
+//mobile size
+@mixin mobile {
+  @media only screen and (max-width: size(mobile)) {
+    color: dodgerblue;
+    width: 250px;
+    height: 400px;
+
+    .body-div-center-h1::before {
+      content: 'mobile';
+    }
+  }
+}

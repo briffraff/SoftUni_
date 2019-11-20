@@ -1,0 +1,34 @@
+body {
+
+  .#{&}-div {
+    font-family: Impact, sans-serif;
+
+    &-center {
+      background-color: black;
+
+      width: 100%;
+      height: 100px;
+
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      @include desktop;
+      @include tablet;
+      @include mobile;
+
+      &-h1 {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
