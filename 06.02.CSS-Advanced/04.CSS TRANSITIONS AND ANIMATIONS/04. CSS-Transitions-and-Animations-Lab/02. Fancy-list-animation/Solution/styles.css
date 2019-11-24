@@ -47,8 +47,7 @@ ul li a {
 
 @keyframes nav-on-scene {
     0%{opacity: 0;transform: translateX(-1em)}
-    50%{opacity: 0.4;}
-    100%{opacity: 1;}
+    100%{opacity: 1; transform: translateX(0em)}
 }
 
 .nav ul li:nth-child(1) {animation-delay: .3s}
