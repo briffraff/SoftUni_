@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 15px;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header header header" "content content sidebar" "footer footer footer";
+  grid-gap: 15px;
+}
+body header, body main, body aside, body footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 60px;
+  padding-left: 15px;
+}
+body header {
+  grid-area: header;
+}
+body main {
+  grid-area: content;
+}
+body aside {
+  grid-area: sidebar;
+}
+body footer {
+  grid-area: footer;
+}
+
+/*# sourceMappingURL=styles.css.map */

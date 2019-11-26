@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  margin: 15px;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: auto auto auto;
+}
+body div {
+  height: 60px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 15px;
+  background-color: black;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
