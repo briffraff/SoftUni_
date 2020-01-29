@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <title>
+        {% if page.title != 'Home' %}
+            {{ page.title }} - {{ site.title }}
+        {% else %}
+            {{ site.title }}
+        {% endif %}
+    </title>
+    <script>
+        window.addEventListener('load', (event) => {
+            document.querySelector('body').classList.add('loaded');
+        });
+    </script>
+    <link rel="stylesheet" href="{{ site.baseurl }}/fontawesome/css/all.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/site.css">
+</head>
+<body class="page-{{ page.title | slugify }}">
+
+    <input type="checkbox" id="site-nav-toggle" class="site-nav-toggle">
+    <div class="site">
+
+        <header class="site-header">
+            <div class="site-wrapper">
+                <div class="site-branding">
+                    <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+                    <p>{{ site.description }}</p>
+                </div>
+
+                {% include navigation.html location="header" %}
+            </div>
+        </header>
+
+        {% if page.fancy_title %}
+        <section class="site-media" style="background-image: url('{{ page.featured_image }}');">
+					
+            <div class="site-wrapper">
+                {% if page.fancy_title %}
+                <h2>{{ page.fancy_title }}</h2>
+                {% endif %}
+                {% if page.fancy_desc %}
+                    <p>{{ page.fancy_desc }}</p>
+                {% endif %}
+                {% if page.fancy_social == 1 %}
+                <ul class="social">
+                    <li>
+                        <a href="#">F</a>
+                    </li>
+                    <li>
+                        <a href="#">T</a>
+                    </li>
+                    <li>
+                        <a href="#">L</a>
+                    </li>
+                    <li>
+                        <a href="#">I</a>
+                    </li>
+                </ul>
+                {% endif %}
+            </div>
+            
+        </section>
+        {% endif %}
+
+        <main class="site-content">
+            <div class="site-wrapper">
+                {{ content }}
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="site-wrapper">
+
+                <div class="info">
+                    <p>{{ site.title }}</p>
+                    <p>A sleek, modern Jekyll theme for personal websites.</p>
+                    <p>&copy; 2019 Personal Jekyll Themes</p> 
+                </div>
+
+                <ul class="social">
+                    <li>
+                        <a href="#">F</a>
+                    </li>
+                    <li>
+                        <a href="#">T</a>
+                    </li>
+                    <li>
+                        <a href="#">L</a>
+                    </li>
+                    <li>
+                        <a href="#">I</a>
+                    </li>
+                </ul>
+
+            </div>
+        </footer>
+    </div>
+    
+</body>
+</html>

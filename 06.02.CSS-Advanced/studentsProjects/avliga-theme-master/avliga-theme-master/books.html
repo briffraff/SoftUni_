@@ -1,0 +1,32 @@
+---
+layout: main
+title: Books
+permalink: /books/
+order: 2
+icon: book
+---
+
+{% assign books_data = site.data.books.root.book %}
+{% assign books = site.books | sort: 'index' |  reverse %}
+
+<div class="books">
+{% for book in books %}
+    {% assign book_index = book.index | minus: 1 %}
+    <div class="book">
+        <div class="small-buttons">
+            <a href="#" class="fav"><i class="fa fa-heart"></i></a>
+        </div>
+        <div class="image">
+            <img src="{{ books_data[book_index].image }}" alt="{{ books_data[book_index].title }}">
+        </div>
+        <div class="title">
+            <h3><a href="{{ site.baseurl }}{{ book.url }}">{{ books_data[book_index].title }}</a></h3>
+        </div>
+        <div class="price">{{ books_data[book_index].price }}</div>
+        <div class="buttons">
+            <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+        </div>
+    </div>
+{% endfor %}
+    <div class="dummy"></div>
+</div>

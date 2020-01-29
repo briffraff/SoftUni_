@@ -1,0 +1,44 @@
+---
+layout: main
+title: Contacts
+permalink: /contacts/
+order: 6
+icon: phone
+---
+
+<div class="contacts-wrapper">
+    <section class="map">
+        <iframe src="{{ site.data.contacts.map }}" frameborder="0"></iframe>
+    </section>
+    <h4 class="title">Contacts</h4>
+    <section class="contacts">
+        <div class="list">
+            <ul>
+                <li>
+                    <a href="tel:{{ site.data.contacts.phone }}">
+                        <i class="fa fa-phone fa-fw"></i>
+                        <span>{{ site.data.contacts.phone }}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:{{ site.data.contacts.email }}">
+                        <i class="fa fa-at fa-fw"></i>
+                        <span>{{ site.data.contacts.email }}</span>
+                    </a>
+                </li>
+                <li>
+                    <i class="fa fa-map-marker-alt fa-fw"></i>
+                    <span>{{ site.data.contacts.address }}</span>
+                </li>
+            </ul>
+        </div>
+        <div class="form">
+            <form action="#" method="post">
+                <legend>Contact Form</legend>
+                <input type="email" name="email" placeholder="Email" autocomplete="off">
+                <textarea name="message" placeholder="Message" rows="10"></textarea>
+                <button type="submit"><i class="fa fa-paper-plane"></i>Send</button>
+            </form>
+        </div>
+    </section>
+</div>

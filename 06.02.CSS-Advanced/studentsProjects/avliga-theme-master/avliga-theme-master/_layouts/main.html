@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+    <div class="site">
+        <header class="header">
+            <div class="inner-wrapper">
+                {% include header.html %}
+            </div>
+            {% if page.image or page.title and page.show-text %}
+            <div class="page-header {{ page.title | slugify }}-header">
+                {% include page-header.html %}
+            </div>
+            {% endif %}
+        </header>
+        <main class="content">
+            <div class="inner-wrapper">
+                {{ content }}
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="inner-wrapper">
+                {% include footer.html %}
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+---
+layout: main
+title: Blog
+permalink: /blog/
+order: 4
+icon: blog
+---
+
+{% assign posts = site.data.posts.rss.channel.item %}
+
+<div class="blog">
+{% for post in site.posts %}
+    {% assign post_index = post.index | minus: 1 %}
+    <article class="post-thumb">
+        <section class="image">
+            <img src="{{ posts[post_index].enclosure._url }}" alt="{{ posts[post_index].title }}"> 
+        </section>
+        <section class="title">
+            <h3>{{ posts[post_index].title }}</h3>
+        </section>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more"><i class="fa fa-angle-double-right"></i></a>
+    </article>
+{% endfor %}
+    <div class="dummy"></div>
+</div>

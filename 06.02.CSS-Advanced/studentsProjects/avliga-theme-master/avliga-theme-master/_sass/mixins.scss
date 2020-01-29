@@ -1,0 +1,23 @@
+@mixin dummy($flex) {
+    &:before, &:after{
+        display: block;
+        content: '';
+        flex: $flex;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    &:before {
+        order: 1000;
+    }
+    .dummy {
+        flex: $flex;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
+
+@mixin single-card($shadow-color) {
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0 0 0.3em $shadow-color;
+}

@@ -1,0 +1,45 @@
+# Avliga Theme Config
+
+title: Avliga Theme
+email: stoianov@saita.me
+description: The theme is for Avliga Books online shop.
+baseurl: "/avliga-theme-master"
+url: ""
+facebook_username: mambzero
+github_username:  mambzero
+
+font-awesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.0/css/all.css
+
+# Collections
+
+collections:
+  books:
+    output: true
+  authors:
+    output: true
+
+collections_dir: collections
+
+# Build settings
+
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+
+exclude:
+  - README
+  - package.json
+  - package-lock.json
+  - node_modules/
+  - gulpfile.js
+  - debug.log
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
