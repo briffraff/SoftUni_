@@ -1,0 +1,28 @@
+* {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+*:before, *:after {
+    box-sizing: inherit; 
+}
+
+
+table, th , td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding:5px;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    text-align: right;
+}

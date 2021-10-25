@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0; 
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+*:before,
+*:after {
+    box-sizing: inherit; }
+
+nav {
+    background-color: #234467;
+    height: 60px;
+}
+
+body {
+    color: white;
+} 
+
+ul {
+    /* background-color:greenyellow; */
+    width: 50%;
+    list-style-type: none;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+ul li {
+    margin: 1em;
+    text-align: center;
+    padding: 0.3em;
+    /* background-color:red; */
+}
+
+
+
+
+

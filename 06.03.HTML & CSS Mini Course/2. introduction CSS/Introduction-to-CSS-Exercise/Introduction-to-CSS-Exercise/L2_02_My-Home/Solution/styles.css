@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0; 
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box; 
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+*:before, *:after {
+    box-sizing: inherit;
+}
+
+p {
+    color: #656565;
+}
+
+body {
+    padding-left: 20em;
+    padding-right: 20em;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 3em 2em 0em 2em;
+}
+
+header article {
+    width: 32.5%;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    border-left: 3px solid #818181;
+}
+
+header article h2 {
+    padding-bottom: 0.5em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.5em;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+main {
+    display: flex;
+}
+
+main p, img {
+    margin: 2em;
+}
+
+main article > img {
+    height: 50%;
+}

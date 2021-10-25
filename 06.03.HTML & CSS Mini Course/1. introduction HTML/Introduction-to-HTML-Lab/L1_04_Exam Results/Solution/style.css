@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0; 
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box; 
+}
+
+*:before,
+*:after {
+    box-sizing: inherit; 
+}
+
+table, th, td {
+    border: 1px solid black;
+    font-family: Helvetica;
+}
+
+table {
+    border-collapse: collapse;
+    width: 35%;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+th {
+    padding:10px;
+    text-align: center;
+}
+
+td {
+    padding:10px;
+    text-align: left;
+}

@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0; 
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+*:before,
+*:after {
+    box-sizing: inherit; }
+
+body {
+    margin-left: 21%;
+    margin-right: 21%;
+    margin-top: 15%;
+    /* background-color:red; */
+}
+
+section p{
+    padding-top: 1em;
+    /* background-color: blue; */
+}
+
+h1 {
+    padding-bottom: 0.5em;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+header p {
+    font-style: italic;
+} 
+
+header h3 {
+    padding-top: 1.5em;
+}
+
+

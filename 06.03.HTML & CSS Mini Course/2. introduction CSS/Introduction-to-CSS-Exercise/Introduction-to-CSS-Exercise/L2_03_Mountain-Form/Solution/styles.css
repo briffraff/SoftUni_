@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+}
+
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 50%;
+    width: 40%;
+}
+
+label {
+    color: rgb(218, 217, 220);
+}
+
+input {
+    color: rgb(118, 115, 115);
+}
+
+button {
+    background-color: #38082a;
+}
+
+section {
+    width: 45%;
+    height: 100%;
+}
+
+form section:nth-child(1) {
+    background-image: url(../Requirements-and-Resources/images/peak.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    color: white;
+    border-radius: 1rem 0 0 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0;
+    padding: 1.5em;
+}
+
+.fa-snowflake {
+    padding-top: 5%;
+    padding-left: 50%;
+}
+
+form section:nth-child(1)::after {
+    background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    border-radius: 1rem 0 0 1rem;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.3;
+}
+
+form section:nth-child(1) h1,p{
+    z-index: 2;
+}
+
+form section:nth-child(2) {
+    /* background-color:red; */
+    border: 5px solid #38082a;
+    border-radius: 0 1rem 1rem 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 4em 3.5em 1em 3.5em;
+}
+
+form section:nth-child(2) label {
+    padding-top: 25px;
+    /* padding-bottom: 3px; */
+
+    font-size: 15px;
+}
+
+form section:nth-child(2) input {
+    /* padding-bottom: 5px; */
+    padding: 4px 10px 4px 10px;
+    font-size: 17px;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+form section:nth-child(2) input:focus {
+    background-color: #eee;
+    color: #38082a;
+    outline: none;
+}
+
+section.buttons {
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 1.3em;
+}
+
+section:nth-child(2) .buttons input {
+    color: white;
+    padding: 0.5em 1em;
+    background-color: #38082a;
+    height: 40px;
+    width: 60%;
+    padding-top: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+section:nth-child(2) .buttons input:hover {
+    opacity: 0.9;
+}
+
+section:nth-child(2) .buttons button {
+    width: 40%;
+    border: none;
+    background: none;
+    color: #38082a;
+    height: 40px;
+    cursor: pointer;
+}

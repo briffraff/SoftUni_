@@ -1,0 +1,12 @@
+{
+  "name": "3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "testNumbers.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
