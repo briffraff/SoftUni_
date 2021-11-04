@@ -27,7 +27,7 @@ function solve() {
         catch (error) {
             departBtn.disabled = true;
             ariveBtn.disabled = true;
-            info.textContent = "Error";
+            info.textContent = 'Error';
         }
     }
 

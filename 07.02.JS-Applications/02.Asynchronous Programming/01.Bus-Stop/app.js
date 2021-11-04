@@ -6,9 +6,9 @@ async function getInfo() {
 
     let url = `http://localhost:3030/jsonstore/bus/businfo/${input.value}`;
 
-    stopName.textContent = "";
-    buses.textContent = "";
-    stopName.textContent = "Loading...";
+    stopName.textContent = '';
+    buses.textContent = '';
+    stopName.textContent = 'Loading...';
 
     try {
         let response = await fetch(url);
@@ -28,8 +28,8 @@ async function getInfo() {
             throw new Error('');
         }
     } catch (error) {
-        stopName.textContent = "Error";
-        buses.textContent = "";
+        stopName.textContent = 'Error';
+        buses.textContent = '';
     }
 
 }

@@ -85,6 +85,7 @@
                 }
             ]
         },
-        "git.ignoreLimitWarning": true
+        "git.ignoreLimitWarning": true,
+        "liveServer.settings.multiRootWorkspaceName": "07.02.JS-Applications"
     }
 }
