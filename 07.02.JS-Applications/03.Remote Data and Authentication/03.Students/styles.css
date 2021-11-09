@@ -47,7 +47,8 @@ table tbody tr:nth-child(even) button{
 
 table tr:hover{
     text-decoration: underline;
-}
+} 
+
 .button-right {
     text-align: center;
 }
