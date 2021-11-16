@@ -71,11 +71,10 @@ async function createUpcomingCondition(founded, forecast, symbols) {
         for (let day of upcomingDays) {
             let conditionSymbol = document.createElement('span');
             conditionSymbol.className = 'symbol';
-            conditionSymbol.textContent = Object.entries(symbols)
-                .filter(
-                    key => key[0]
-                        .includes(day.condition.slice(0, 4))
-                )[0][1];
+            conditionSymbol.textContent = symbols[
+                Object.keys(symbols)
+                    .filter(d => day.condition.includes(d.slice(0, 4)))
+            ];
 
             let infoTemperature = document.createElement('span');
             infoTemperature.className = 'forecast-data';

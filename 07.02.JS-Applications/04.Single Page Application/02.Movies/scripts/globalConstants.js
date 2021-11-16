@@ -1,0 +1,21 @@
+//  global constants
+export let globalConstants = {
+    homeId: '#home-page',
+    navId: '#navigation',
+    registerId: '#form-sign-up',
+    loginId: '#form-login',
+    detailsId: '#movie-details',
+    editId: '#edit-movie',
+    addMovieId: '#add-movie',
+    addMovieBtnId: '#addMovieBtn',
+    loading: '...Loading',
+    localhost: 'http://localhost:3030/',
+    movieUrl: 'data/movies/',
+    usersUrl: 'users/login/',
+    logoutUrl: 'users/logout/',
+    registerUrl: 'users/register/',
+    postMsg: 'Post complete! response: ',
+    deleteMsg: 'Delete complete! response: ',
+    editMsg: 'Edit complete! response: ',
+    errorGET: 'Error on GET request!',
+};

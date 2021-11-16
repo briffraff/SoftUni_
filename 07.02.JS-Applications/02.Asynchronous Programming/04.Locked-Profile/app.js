@@ -7,7 +7,7 @@ async function lockedProfile() {
     if (response.ok == false) {
         throw new Error('');
     }
-
+   
     let data = await response.json();
 
     Object.keys(data).forEach((user, i) => {
