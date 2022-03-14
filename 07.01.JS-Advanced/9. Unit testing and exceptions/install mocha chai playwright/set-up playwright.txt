@@ -1,0 +1,31 @@
+powershell -> run as administrator -> Set-ExecutionPolicy Unrestricted
+
+setx NODE_PATH %AppData%\npm\node_modules
+set NODE_PATH=%AppData%\npm\node_modules
+
+1. npm install --global --force @playwright/test
+2. npx playwright install
+
+EXAMPLES:
+const { test, chromium, expect } = require('@playwright/test');
+
+(async () => {
+    const browser = await chromium.launch();
+    const page = await browser.newPage();
+    await page.goto('https://google.com');
+    await page.screenshot({path: 'example.png'});
+    await browser.close();
+})();
+
+3. RUN -> node ./test.js
+
+OR <----
+
+
+test('basic test', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+  const title = page.locator('.navbar__inner .navbar__title');
+  await expect(title).toHaveText('Playwright');
+});
+
+3. npx playwright test

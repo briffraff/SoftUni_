@@ -9,3 +9,5 @@ remove origin - "git remote remove origin"
 
 add origin to github - "git remote add origin https://github.com/briffraff/a.git"
 add upstream (tracking) reference - "git push -u origin master"
+
+git clone "https:/project"

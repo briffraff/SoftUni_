@@ -1,0 +1,17 @@
+{
+  "name": "mytheater",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/e2e.test.js",
+    "start": "http-server -a localhost -p 5500 -P http://localhost:5500"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lit-html": "^2.0.2",
+    "page": "^1.11.6",
+    "playwright-chromium": "^1.17.1"
+  },
+}

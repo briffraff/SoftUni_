@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\02.BinarySearchTree\02.BinarySearchTree.csproj" />
+    <ProjectReference Include="..\03.MaxHeap\03.MaxHeap.csproj" />
+    <ProjectReference Include="..\04.PriorityQueue\04.PriorityQueue.csproj" />
+  </ItemGroup>
+</Project>
