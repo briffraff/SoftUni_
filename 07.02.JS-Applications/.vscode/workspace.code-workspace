@@ -2,6 +2,9 @@
     "folders": [
         {
             "path": "C:/Users/riffraff/Dropbox/SoftUni/07.02.JS-Applications"
+        },
+        {
+            "path": "../../../../.vscode/extensions/riffraff.synthcake-ui-0.0.1"
         }
     ],
     "settings": {
@@ -30,7 +33,8 @@
                     "warn",
                     "single"
                 ],
-                "no-undef": "error"
+                "no-undef": "error",
+                
             }
         },
         "launch": {
@@ -85,7 +89,8 @@
                 }
             ]
         },
-        "git.ignoreLimitWarning": true,
-        "liveServer.settings.multiRootWorkspaceName": "07.02.JS-Applications"
+        "eslint.format.enable": true,
+        "eslint.lintTask.enable": true,
+        "liveServer.settings.multiRootWorkspaceName": "07.02.JS-Applications",
     }
 }

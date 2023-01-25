@@ -1,7 +1,10 @@
 {
     "folders": [
         {
-            "path": "C:/Users/riffraff/Dropbox/SoftUni/07.01.JS-Advanced"
+            "path": "C:/Users/RR/Dropbox/SoftUni/07.01.JS-Advanced"
+        },
+        {
+            "path": "../../07.02.JS-Applications"
         }
     ],
     "settings": {
@@ -48,7 +51,7 @@
                     "internalConsoleOptions": "openOnSessionStart",
                     "outputCapture": "std",
                     "name": "Mocha Tests - Factory(Area)",
-                    "program": "C:/Users/riffraff/AppData/Roaming/npm/node_modules/mocha/bin/_mocha",
+                    "program": "C:/Users/RR/AppData/Roaming/npm/node_modules/mocha/bin/_mocha",
                     "request": "launch",
                     "skipFiles": [
                         "<node_internals>/**"
@@ -68,7 +71,7 @@
                     "internalConsoleOptions": "openOnSessionStart",
                     "outputCapture": "std",
                     "name": "Mocha Tests - File",
-                    "program": "C:/Users/riffraff/AppData/Roaming/npm/node_modules/mocha/bin/_mocha",
+                    "program": "C:/Users/RR/AppData/Roaming/npm/node_modules/mocha/bin/_mocha",
                     "request": "launch",
                     "skipFiles": [
                         "<node_internals>/**"
