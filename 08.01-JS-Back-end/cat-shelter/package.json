@@ -1,0 +1,20 @@
+{
+  "name": "cat-shelter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "eslint": "^9.10.0",
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "formidable": "^3.5.1"
+  }
+}
