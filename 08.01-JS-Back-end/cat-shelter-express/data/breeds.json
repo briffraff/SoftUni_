@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "type": "Bombay Cat"
+  },
+  {
+    "id": 2,
+    "type": "American Bobtail Cat"
+  },
+  {
+    "id": 3,
+    "type": "Bengal Cat"
+  },
+  {
+    "id": 4,
+    "type": "British Shorthair Cat"
+  },
+  {
+    "id": 5,
+    "type": "Unknown"
+  }
+]

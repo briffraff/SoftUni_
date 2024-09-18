@@ -1,0 +1,21 @@
+<form action="/search" method="GET">
+    <input type="text" name="search">
+    <button type="submit">Search</button>
+</form>
+
+<section class="cats">
+    <ul>
+        {{#each cats}}
+        <li>
+            <img src="{{imageUrl}}" alt="Black Cat">
+            <h3>{{name}}</h3>
+            <p><span>Breed: </span>{{breed}}</p>
+            <p><span>Description: </span>{{description}}</p>
+            <ul class="buttons">
+                <li class="btn edit"><a href="/edit/{{id}}">Change Info</a></li>
+                <li class="btn delete"><a href="/shelter/{{id}}">New Home</a></li>
+            </ul>
+        </li>
+        {{/each}}
+    </ul>
+</section>
